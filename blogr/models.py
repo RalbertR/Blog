@@ -1,5 +1,4 @@
-from blogr import db
-
+from . import db
 class User(db.Model):
     __tablename__= 'users'
     id = db.Column(db.Integer, primary_key = True)
@@ -12,7 +11,7 @@ class User(db.Model):
         self.username = username
         self.email = email
         self.password = password
-        self. photo = photo
+        self.photo = photo
 
     def __repr__(self):
         return f"User: '{self.username}'"
